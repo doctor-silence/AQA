@@ -16,6 +16,8 @@ class TextBoxPage(BasePage):
 
 
     def check_filled_form(self):
-
-
-
+        full_name = self.element_are_presence(self.locators.Created_Full_Name).text
+        email = self.element_are_presence(self.locators.Created_Email).text
+        current_address = self.element_are_presence(self.locators.Created_Current_Address).text
+        permanent_address = self.element_are_presence(self.locators.Created_Permanent_Address).text
+        return full_name, email, current_address, permanent_address
